@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}{{item.title}}{% endblock %}
+
+{% block content%}
+{% load static %}
+<section class="product-card">
+    <div class="product-image">
+        <img src="{{item.image.url}}" alt="Айфон 11 64гб">
+    </div>
+    <div class="product-info">
+        <p class="product-date">{{item.data|date:"d.m.Y"}}</p>
+        <h2 class="product-title">{{item.title}}</h2>
+        <p class="product-price">{{item.price}}₸</p>
+        <div class="product-details">
+            <span class="product-detail">{{item.price_stat}}</span>
+            <span class="product-detail">{{item.characteristic}}</span>
+        </div>
+        <h3 class="product-description-title">Описание</h3>
+        <p class="product-description">
+            {{item.discription}}
+        </p>
+        <h3 class="product-contact">{{item.phone}}</h3>
+    </div>
+</section>
+{% endblock %}

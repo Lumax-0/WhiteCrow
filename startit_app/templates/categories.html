@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Все категории{% endblock %}
+
+{% block content%}
+{% load static %}
+<body>
+    <section>
+        <div class="category-card">
+            <div class="container">
+                <div class="category-title">
+                    Категории
+                </div>
+                <div class="category-row">
+                    {% for category in categories %}
+                    <a href="{% url 'items_by_category_page' slug=category.slug %}" class="category-item">
+                        <img src="{{category.image.url}}" alt="">
+                        {{ category.name }}
+                    </a>
+                    {% endfor %}
+                </div>
+                <div class="ad-body">
+                    Тут могла быть ваша реклама!
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+</html>
+{% endblock %}

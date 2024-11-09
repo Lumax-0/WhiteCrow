@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inria Serif", sans-serif;
+}
+:root{
+    --blue: #8EC1D6;
+    --skuka: #263141;
+    --piy: #3D4B5F;
+    --lalala: #8799AF;
+    --white: #FFFFFF;
+    --gray: #CBD5E1;
+    --black: #000000;
+}
+.container{
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.title{
+    font-size: 20px;
+    font-weight: 650;
+    color: var(--lalala);
+}
+header{
+    min-width: 400px;
+    padding: 15px 0;
+    background-color: var(--skuka);  
+}
+body{
+    height: 100%;
+    padding-bottom: 20px;
+    background-image: url("../images/main.svg");   
+}
+
+.menu-button{
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+}
+.picture-head{
+    display: flex;
+    justify-content: space-between;
+}
+.kakashka{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.category-title{
+    display: flex;
+    justify-content: center;
+    color: var(--black);
+    background-color: var(--lalala);
+    padding: 5px;
+    margin: 20px 90px 0;
+    border-radius: 30px;
+    font-size: 30px;
+    font-weight: 650;
+}
+.category-row {
+    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    color: var(--blue);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 150px 150px;
+    gap: 80px;
+    text-align: center;
+}
+.ad-body{
+ color: var(--blue);
+ text-align: center;
+ margin-top: 100px;
+ font-size: 30px;
+ font-weight: 700;
+}
+.category-row span{
+    width: 118px;
+    height: 118px;
+}
+#menu-list{
+    display: none;
+    background-color: var(--skuka);
+    padding: 20px 0;
+}
+.menu-list .menu-list__item{
+    list-style: none;
+}
+.menu-list__item{
+    margin-bottom: 40px;
+}
+.menu-list__link{
+    text-decoration: none;
+    color: var(--blue);
+}
+.menu-list__link img{
+    position: relative;
+    top: 6px;
+    margin-right: 5px;
+}
+
+
+
+
+.categories, .offers{
+    padding: 10px 0;
+}
+.categories-list, .offer-list{
+    margin: 20px 0;
+    font-weight: 700;
+}
+.category-item{
+    font-size: 19px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--piy);
+    background-color:var(--lalala);
+    border-radius: 30px;
+    padding: 10px 15px;
+    transition: 0.3 ease-in-out;
+}
+.category-item:hover{
+    background-color: var(--skuka);
+    color: var(--lalala);
+}
+.login-form div{
+    display: block;
+
+}
+.offer-card {
+    min-width: 400px;
+    background-color: var(--lalala);
+    border-radius: 20px;
+    display: flex;
+    margin-top: 15px;
+}
+.offer-card img{
+    padding: 10px;
+    border-radius: 30px;
+    width: 176px;
+}
+.offer-card__price, .offer-card__descrition{
+    color: var(--piy);
+    margin-bottom: 3px;
+    padding: 15px 7px 7px 7px;
+}
+.offer-card__body {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 13px;
+    padding-left: 15px;
+}
+.lalala-button{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: var(--piy);
+    color: var(--lalala);
+    display: inline-block;
+    border-radius: 18px;
+    text-align: center;
+    padding: 10px 25px;
+}
+.register-page {
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    min-height: 100vh;
+}
+
+.register-page h2 {
+    margin-bottom: 1.5rem;
+    color: var(--blue);
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form label {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--skuka);
+    font-size: 20px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.register-form input[type="text"]:focus,
+.register-form input[type="email"]:focus,
+.register-form input[type="password"]:focus {
+    outline: 2px solid #ffffff;
+}
+
+.submit-btn {
+    padding: 0.75rem;
+    background-color: #586e75;
+    color: #ffffff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #839496;
+}
+.login-page {
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    min-height: 200vh;
+}
+
+.login-page h2 {
+    margin-bottom: 1.5rem;
+    color: var(--blue);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--skuka);
+    font-size: 20px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    outline: 2px solid #ffffff;
+}
+
+.submit-btn {
+    margin: 10px;
+   text-decoration: none;
+    font-size: 18px;
+    background-color: var(--piy);
+    color: var(--lalala);
+    display: inline-block;
+    border-radius: 18px;
+    text-align: center;
+    padding: 10px 25px;
+}
+
+.submit-btn:hover {
+    background-color: #839496;
+}
+.product-card {
+    background-color:var(--piy); /* Тёмный фон карточки */
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 100vh;
+}
+
+/* Секция изображения */
+.product-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Информация о товаре */
+.product-info {
+    margin-top: 1rem;
+}
+
+.product-date {
+    color: #cccccc; /* Серый цвет даты */
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--white); /* белый цвет цены */
+    margin-bottom: 0.5rem;
+}
+
+.product-condition {
+    font-size: 0.8rem;
+    color: #cccccc;
+    background-color: #333; 
+    border-radius: 5px;
+
+}
+
+/* Детали товара */
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.product-detail {
+    background-color: #333;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: var(--white);
+}
+
+/* Описание */
+.product-description-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #dddddd;
+    line-height: 1.4;
+    font-size: 17px;
+}
+.product-contact{
+    margin-top: 10px;
+    color: var(--white);
+    font-size: 16px;
+}
+
+.auth form{
+    margin: 20px 0;
+}
+
+.auth label{
+    display: block;
+    color: var(--skuka);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.auth input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    background-color: var(--white);
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.help-link{
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+}
+.login_link_1{
+    text-decoration: none;
+}
+label {
+    display: block;
+    text-align: left;
+}
+.my-input {
+    padding: 10px;
+}

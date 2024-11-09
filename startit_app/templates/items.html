@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Все товары{% endblock %}
+
+{% block content%}
+{% load static %}
+<section class="offers">
+    <div class="container">
+        <h2>Товары</h2>
+        <div class="offer-list">
+            {% for item in items%}
+            <div class="offer-card">
+                <img src="{{ item.image.url }}" alt="offer-photka">
+                <div class="offer-card__body">
+                    <h3 class="offer-card__title">{{ item.title}}</h3>
+                    <h4 class="offer-card__price">
+                        {% if item.price == "не указано" %}
+                        {{ item.price}} 
+                        {% else %}
+                        {{ item.price }} &#8376;
+                        {% endif %}
+                    </h4>
+                    <h4 class="offer-card__descrition">{{ item.description }}</h4>
+                    <a href="{% url 'item_elem_page' pk=item.pk %}" class="lalala-button">Перейти</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
